@@ -98,8 +98,8 @@ def PrintPath(structure: any, visited):
 def GreedySearch(structure: any, start: any, end: any) -> list:  # I couldn't figure out a way to get this to run Search(). Skill issue ig
     curr = start
     visited = []
-    queue = MaxHeap()
-    push = lambda x: queue.push(x, -structure.GetDistance(x, end))
+    queue = MinHeap()
+    push = lambda x: queue.push(x, structure.GetDistance(x, end))
     push(curr)
 
     while curr != end:
